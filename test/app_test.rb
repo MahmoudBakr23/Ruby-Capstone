@@ -3,7 +3,6 @@ require 'test/unit'
 require 'test/unit/ui/console/testrunner'
 
 class ScrapTest < Test::Unit::TestCase
-
   def test_scrapping
     assert_equal 16, Scrap.new('https://www.16personalities.com/personality-types', @doc, @document).web_scraper
   end
