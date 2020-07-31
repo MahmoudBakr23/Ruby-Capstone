@@ -5,9 +5,7 @@ class Scrap
   def initialize(url, _doc, _document)
     @url = url
     @doc = ::OpenURI.open_uri(url)
-    @document = Nokogiri::HTML(@doc) do |config|
-      config.strict.noblanks
-    end
+    @document = Nokogiri::HTML(@doc)
   end
 
   def web_scraper
