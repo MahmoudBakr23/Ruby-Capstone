@@ -22,6 +22,7 @@ class Scrap
       }
       characters.push(character)
     end
+    characters.count
   end
 
   def web_scraper_articles
@@ -38,6 +39,7 @@ class Scrap
       }
       articles.push(article)
     end
+    articles.count
   end
 end
 
