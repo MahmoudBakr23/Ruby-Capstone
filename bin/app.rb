@@ -4,6 +4,8 @@ require 'nokogiri'
 require 'open-uri'
 
 class Scrap
+  attr_accessor :url, :doc, :document
+
   def initialize(url, _doc, _document)
     @url = url
     @doc = ::OpenURI.open_uri(url)
@@ -11,35 +13,35 @@ class Scrap
   end
 
   def web_scraper
-    characters = []
     characters_types = @document.css('a.type')
-
+    i = 1
     characters_types.each do |c|
       character = {
+        rate: "Character #_#{i}",
         name: c.css('h4').text.strip,
         type: c.css('h5').text.strip,
         describtion: c.css('div.snippet').text.strip
       }
-      characters.push(character)
+      character.each {|key, value| puts "(#{key.capitalize}) : #{value}"}
+      i+=1
     end
-    characters.count
   end
 
   def web_scraper_articles
-    articles = []
     articles_scrapping = @document.css('article')
-
+    i = 1
     articles_scrapping.each do |a|
       article = {
+        rate: "Article #_#{i}",
         title: a.css('div.type a.with-border').text.strip,
         headline: a.css('a.title').text.strip,
         date: a.css('span.date').text.strip,
         author: a.css('span.author').text.strip,
         number_of_comments: a.css('span.comments a.with-border').text.strip
       }
-      articles.push(article)
+      article.each {|key, value| puts "(#{key.capitalize}) : #{value}"}
+      i+=1
     end
-    articles.count
   end
 end
 
