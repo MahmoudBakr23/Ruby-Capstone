@@ -22,8 +22,8 @@ class Scrap
         type: c.css('h5').text.strip,
         describtion: c.css('div.snippet').text.strip
       }
-      character.each {|key, value| puts "(#{key.capitalize}) : #{value}"}
-      i+=1
+      character.each { |key, value| puts "(#{key.capitalize}) : #{value}" }
+      i += 1
     end
   end
 
@@ -39,8 +39,8 @@ class Scrap
         author: a.css('span.author').text.strip,
         number_of_comments: a.css('span.comments a.with-border').text.strip
       }
-      article.each {|key, value| puts "(#{key.capitalize}) : #{value}"}
-      i+=1
+      article.each { |key, value| puts "(#{key.capitalize}) : #{value}" }
+      i += 1
     end
   end
 end
