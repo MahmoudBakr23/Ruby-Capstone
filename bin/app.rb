@@ -23,7 +23,7 @@ class Scrap
         type: c.css('h5').text.strip,
         describtion: c.css('div.snippet').text.strip
       }
-      character.each { |key, value| "#{key.capitalize} : #{value.capitalize}"}
+      character.each { |key, value| "#{key.capitalize} : #{value.capitalize}" }
       i += 1
       characters << character
     end
