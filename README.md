@@ -1,6 +1,7 @@
 # Ruby-Capstone
 A scraper developed in Ruby
 **A web scraper app that make a list of specific data from a specific website which is https://www.16personalities.com/personality-types , I've chosen this website because I like it and it was nice extracting data out of it.**
+It should return 16 characters and 9 articles
 
 ## Built With
 
@@ -11,13 +12,20 @@ A scraper developed in Ruby
 
 [Live Demo Link](https://repl.it/@MahmoudBakr23/Web-Scraper#main.rb)
 
-## Getting Started
+## To Run On Live Demo
+Press Run
+
+## To Run Locally
 
 To get a local copy of the repository please run the following commands on your terminal:
 
 $ git clone <https://github.com/MahmoudBakr23/Ruby-Capstone.git>
 
 $ cd Ruby-Capstone
+
+$ in terminal run> ruby ./bin/app.rb to see the results.
+
+$ in terminal run> rspec ./spec/spec_test.rb to see the tests result.
 
 ## Authors
 
